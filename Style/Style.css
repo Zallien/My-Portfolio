@@ -1,0 +1,298 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+main{
+    width: 100%;
+    height: 100dvh;
+    background-image: linear-gradient(to Right,rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.3)), url(/Assets/bg003.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: auto;
+}
+
+main .basicinformation{
+    width: 50%;
+    height: 100dvh;
+    padding: 30px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    overflow: hidden;
+}
+
+main .basicinformation img{
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    margin: 20px 10px;
+}
+
+main .basicinformation h1{
+    padding: 0;
+    margin-bottom: 5px;
+}
+
+main .basicinformation h5{
+    padding: 0;
+    margin-bottom: 5px;
+}
+
+main .basicinformation div.location{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+main .basicinformation div.location .locs{
+    width: 20px;
+    height: 20px;
+    filter: invert(100);
+    margin: 0;
+    margin: 5px 0;
+    margin-right: 3px;
+}
+
+main .basicinformation #downloadresume{
+    width: fit-content;
+    width: 200px;
+    padding: 5px 0;
+    font-size: 18px;
+    text-align: center;
+    border: thin solid white;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(27, 27, 27);
+    margin-top: 5px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+main .basicinformation #downloadresume:hover{
+    scale: 1.05;
+    box-shadow: 0 0 10px black,
+                0 0 13px white;
+}
+
+main .basicinformation .socials{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    cursor: pointer;
+    width: 80%;
+    padding: 10px 5px;
+    /* border: thin solid black; */
+}
+
+main .basicinformation .socials a{
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+    background-color: darkgray;
+    border-radius: 50%;
+    border: thin solid black;
+    transition: all 0.3s ease-in-out;
+    margin-right: 10px; 
+
+}   
+
+main .basicinformation .socials a img{
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease-in-out;
+}
+
+main .basicinformation .socials a:hover{
+    scale: 1.07;
+    box-shadow: 0 0 10px black,
+                0 0 15px gray;
+}
+
+main .basicinformation .socials a img:hover{
+    scale: 1.05;
+}
+
+main .basicinformation .socials .socialmedias{
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+main .basicinformation .socials .socialmedias a{
+    width: 50px;
+    height: 50px;
+
+}
+
+
+
+
+
+
+
+main .moreinformation{
+    width: 50%;
+    height: 100dvh;
+    padding: 20px;
+    color: white;
+    padding: 30px 20px;
+    cursor: pointer;
+    overflow: auto;
+}
+
+main .moreinformation::-webkit-scrollbar{
+    display: none;
+}
+
+@keyframes lightings {
+    
+    0%{
+        box-shadow: none;
+    }
+
+    50%{
+        box-shadow: 0 0 10px black,
+                    0 0 15px white;
+    }
+
+    100%{
+        box-shadow: none;
+    }
+}
+
+main .moreinformation .aboutme,
+main .moreinformation .skills,
+main .moreinformation .Education,
+main .moreinformation .Works{
+    border-left: 1px solid white;
+    padding: 0 20px;
+    z-index: 1;
+    position: relative;
+    margin-bottom: 50px;
+    /* border: thin solid white; */
+}
+
+main .moreinformation .aboutme::after,
+main .moreinformation .skills::after,
+main .moreinformation .Education::after,
+main .moreinformation .Works::after{
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    left: -5px;
+    bottom: -5px;
+    z-index: 2;
+    animation: lightings 5s infinite;
+}
+
+main .moreinformation .aboutme::before,
+main .moreinformation .skills::before,
+main .moreinformation .Education::before,
+main .moreinformation .Works::before{
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    left: -5px;
+    top: -5px;
+    z-index: 2;
+    animation: lightings 5s infinite;
+}
+
+main .moreinformation .aboutme h2,
+main .moreinformation .skills h2,
+main .moreinformation .Education h2,
+main .moreinformation .Works h2{
+    position: relative;
+    margin-bottom: 10px;
+    /* top: -16px;   */
+}
+
+
+main .moreinformation .aboutme p{
+    padding: 0 20px;
+}
+
+main .moreinformation .skills .programminglangs,
+main .moreinformation .skills .Frameworks,
+main .moreinformation .skills .GameDevelopment,
+main .moreinformation .skills .Database{
+    padding: 0 20px;
+    margin-bottom: 10px;
+}
+
+main .moreinformation .skills .programminglangs ul,
+main .moreinformation .skills .Frameworks ul,
+main .moreinformation .skills .GameDevelopment ul,
+main .moreinformation .skills .Database ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: fit-content;
+    padding: 5px 0;
+}
+
+main .moreinformation .skills .programminglangs ul li,
+main .moreinformation .skills .Frameworks ul li,
+main .moreinformation .skills .GameDevelopment ul li,
+main .moreinformation .skills .Database ul li{
+    margin-right: 10px;
+    font-size: 16px;
+    padding: 3px 10px;
+    border: thin solid white;
+    border-radius: 10px;
+    background-color: rgb(27, 27, 27);
+}
+
+main .moreinformation .Education div{
+    margin-left: 20px;
+    margin-bottom: 30px;
+    padding: 0;
+}
+
+main .moreinformation .Education div p{
+    width: 90%;
+    padding-left: 20px;
+}
+
+main .moreinformation .Works table{
+    
+    width: 100%;
+    /* border: thin solid white; */
+    border-top: thin solid white;
+    border-collapse: collapse;
+
+}
+
+main .moreinformation .Works table tbody tr td{
+    font-size: 18px;
+    padding: 8px 10px;
+    border: thin solid white;
+    border-top: 0;
+}
+
+main .moreinformation .Works table tbody tr td:first-child{
+    text-align: center;
+}
